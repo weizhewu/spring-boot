@@ -29,4 +29,9 @@ class UserMapperTest {
     void login() {
         System.out.println(mapper.login("111","111"));
     }
+
+    @Test
+    void getUserById() {
+        System.out.println(mapper.getUserById("1"));
+    }
 }

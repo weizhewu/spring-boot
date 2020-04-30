@@ -3,7 +3,6 @@ package com.soft1851.springboot.aop.aspect;
 import com.soft1851.springboot.aop.annotation.ControllerWebLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

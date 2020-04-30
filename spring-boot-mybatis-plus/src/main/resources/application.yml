@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://rm-m5ee476bu350735gjeo.mysql.rds.aliyuncs.com:3306/db_wzw?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&allowMultiQueries=true
+    userName: root
+    password: XuNiit_#
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 10000
+      max-lifetime: 60000
+      connection-timeout: 30000
+#Mybatis-Plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.soft1851.springboot.mbp.entity
+  global-config:
+    db-config:
+      #主键策略：auto主键自增，input用户输入id，id_word全局唯一的数字id，UUID全局唯一UUID
+      id-type: auto
+      #是否忽略非空判断 字段策略
+      field_strategy: not_empty
+      #开启驼峰式
+      table-underline: true
+      #数据库类型
